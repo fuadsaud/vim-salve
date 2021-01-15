@@ -268,7 +268,7 @@ function! s:projectionist_detect() abort
     endif
     if path =~# 'resource'
     elseif path =~# 'test'
-      let test += [path]
+      let test += [path, path.'/unit']
     elseif path =~# 'spec'
       let spec += [path]
     elseif path =~# 'src'
